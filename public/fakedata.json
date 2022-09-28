@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "633482e951efe90ede49858c",
+    "name": "Quad Set",
+    "desc": "Sit down while your leg out stretch in front of you. Push you knee down into the floor/mat, hold for 3-5 seconds and then relax. 3 sets of 10 reps.",
+    "time":"500",
+    "img": "http://placehold.it/32x32"
+  },
+  {
+    "_id": "633482e976a17bb49be10b65",
+    "name": "Straight Leg Raise",
+    "desc": "Sit down a little bit back raise your leg straight about a foot and back down. Make sure that your leg doesn’t bend and try to keep it as straight as possible. 3 sets of 10 reps.",
+    "time":"400",
+    "img": "http://placehold.it/32x32"
+  },
+  {
+    "_id": "633482e956616d43605f95f7",
+    "name": "Short Arc Quads",
+    "desc": "Slip a fom roll/rolled towel/double up a pillow and slip it underneath your knee. Lift your knee 10 to 15 degree all the way to straight and slowly keep your leg down. 3 sets of 10 reps.",
+    "time":"550",
+    "img": "http://placehold.it/32x32"
+  },
+  {
+    "_id": "633482e92400ac26b9e7469d",
+    "name": "Double Leg Bridges",
+    "desc": "Lay on your back with your knees bent. Contract the glutes contract the hamstrings to lift our hips up towards the ceiling. Hold for 2-3 seconds. 3 sets of 10 reps.",
+    "time":"600",
+    "img": "http://placehold.it/32x32"
+  },
+  {
+    "_id": "633482e9aa209e5c0a4f4ac3",
+    "name": "Single Leg Bridges",
+    "desc": "Lay on your back with your knees bent. Extend your one leg out. Use your other hip and leg to pull the leg all the way straight. Keep your keep hip up as well. 3 sets of 10 reps.",
+    "time":"300",
+    "img": "http://placehold.it/32x32"
+  },
+  {
+    "_id": "633482e9f9457ef79d504f09",
+    "name": "Sidelying Hip Abduction",
+    "desc": "Lay down on one of your side. The leg below should be bent and keep the other leg straight. Raise the straight leg up towards the ceiling and right back down. 3 sets of 10 reps.",
+    "time":"350",
+    "img": "http://placehold.it/32x32"
+  }
+]
