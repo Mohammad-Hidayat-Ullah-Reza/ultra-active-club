@@ -6,14 +6,18 @@ import Exercises from "../Exercises/Exercises";
 const Container = () => {
   const [exercises, setExercises] = useState([]);
   const [times, setTimes] = useState([]);
-  const [breaktimes, setBreakTimes] = useState([]);
+  const [breaktime, setBreakTime] = useState([]);
   useEffect(() => {
     fetch("./fakedata.json")
       .then((data) => data.json())
       .then((res) => setExercises(res))
       .catch((e) => console.log(e));
   }, []);
-  useEffect(() => {}, []);
+
+  useEffect(() => {
+    const exists = localStorage.getItem("break-time");
+    console.log(exists);
+  }, [breaktime]);
 
   const handleAddTime = (getTime) => {
     const getTimeInt = parseInt(getTime);
@@ -21,11 +25,11 @@ const Container = () => {
     setTimes(timeArr);
   };
 
-  const handleBreakTime = (breakTime) => {
-    const breakTimeInt = parseInt(breakTime);
-    setBreakTimes(breakTimeInt);
+  const handleBreakTime = (time) => {
+    setBreakTime(time);
+    localStorage.setItem("break-time", time);
   };
-  console.log(breaktimes);
+
   return (
     <div className="container">
       <div className="exercises-container">
