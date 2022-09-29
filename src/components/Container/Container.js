@@ -6,7 +6,7 @@ import Exercises from "../Exercises/Exercises";
 const Container = () => {
   const [exercises, setExercises] = useState([]);
   const [times, setTimes] = useState([]);
-  const [breakTime, setBreakTime] = useState([]);
+  const [breakTime, setBreakTime] = useState(0);
   useEffect(() => {
     fetch("./fakedata.json")
       .then((data) => data.json())
@@ -31,7 +31,7 @@ const Container = () => {
     setBreakTime(selectedtime);
     localStorage.setItem("break-time", selectedtime);
   };
-  console.log(breakTime);
+
   return (
     <div className="container">
       <div className="exercises-container">

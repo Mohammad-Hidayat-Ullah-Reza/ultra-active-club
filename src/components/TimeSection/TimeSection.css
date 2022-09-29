@@ -1,3 +1,7 @@
+.aside-section {
+  background-color: #f0ffff;
+  border-left: 2px solid #2a71f5;
+}
 .profile-container {
   display: flex;
   align-items: center;
@@ -25,14 +29,32 @@
 }
 
 .select-break-time,
+.exercise-details,
 .exercise-time,
 .break-time {
-  font-size: 20px;
   text-align: left;
   margin: 10px;
 }
 
-.select-break-time {
+.select-break-time,
+.exercise-details {
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.exercise-time,
+.break-time {
+  font-size: 18px;
+  padding: 3px 20px;
+  background-color: gainsboro;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.select-break-time,
+.exercise-details {
   font-size: 23px;
   font-weight: 600;
 }
@@ -54,4 +76,19 @@
 .break-time-option-container div:hover {
   background-color: rgb(252, 202, 140);
   cursor: pointer;
+}
+
+.activity-completed-btn {
+  font-size: 15px;
+  font-weight: 700;
+  background-color: rgb(42, 113, 245);
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 30px;
+  margin: 15px;
+}
+.activity-completed-btn:hover {
+  cursor: pointer;
+  background-color: rgb(22, 67, 150);
 }

@@ -8,8 +8,9 @@ const TimeSection = ({ times, handleBreakTime, breakTime }) => {
   for (const time of times) {
     totalTime += time;
   }
+
   const notify = () =>
-    toast(" Wow so easy!", {
+    toast(" Wow, You've completed all exercise!", {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -34,7 +35,7 @@ const TimeSection = ({ times, handleBreakTime, breakTime }) => {
         </div>
       </div>
       <div>
-        <h4 className="select-break-time">Select Break Time</h4>
+        <h4 className="select-break-time">Add A Break</h4>
         <div className="break-time-option-container">
           <div onClick={() => handleBreakTime("05")}>05s</div>
           <div onClick={() => handleBreakTime("10")}>10s</div>
@@ -43,14 +44,19 @@ const TimeSection = ({ times, handleBreakTime, breakTime }) => {
           <div onClick={() => handleBreakTime("50")}>50s</div>
         </div>
       </div>
-      <div className="exercise-time">
-        Exercise Time <span>{totalTime}</span>
-      </div>
-      <div className="break-time">
-        Break Time <span>{breakTime}</span>
-      </div>
+
+      <h4 className="exercise-details">Exercise Details</h4>
+
+      <p className="exercise-time">
+        Exercise Time: <span>{totalTime} sec</span>
+      </p>
+      <p className="break-time">
+        Break Time: <span>{breakTime} sec</span>
+      </p>
       <div>
-        <button onClick={notify}>complete</button>
+        <button onClick={notify} className="activity-completed-btn">
+          Activity Completed
+        </button>
         <ToastContainer
           position="top-center"
           autoClose={5000}
