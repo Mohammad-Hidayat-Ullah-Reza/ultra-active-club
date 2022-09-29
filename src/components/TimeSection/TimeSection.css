@@ -99,16 +99,15 @@
 }
 
 @media screen and (max-width: 577px) {
-  .aside-section-subcontainer {
-    position: relative;
-  }
-
+  .select-break-time,
   .exercise-details {
+    font-size: 20px;
     text-align: center;
-    margin-top: 0;
+    margin-top: 5px;
   }
   .exercise-time,
   .break-time {
+    font-size: 15px;
     text-align: center;
     flex-direction: column;
   }

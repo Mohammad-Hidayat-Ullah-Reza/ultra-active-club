@@ -1,0 +1,22 @@
+.questions-container {
+  padding: 20px 60px;
+  background-color: white;
+  text-align: left;
+  border-top: 3px solid #36404f;
+}
+
+.questions-container h2 {
+  color: #36404f;
+  margin-top: 0;
+  font-size: 40px;
+  text-align: center;
+}
+.questions-container > div > h3 {
+  margin-top: 35px;
+  margin-bottom: 0px;
+  font-size: 25px;
+}
+
+.questions-container > div > p {
+  padding-left: 20px;
+}
