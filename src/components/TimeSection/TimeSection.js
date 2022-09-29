@@ -1,7 +1,7 @@
 import "./TimeSection.css";
 import React from "react";
 
-const TimeSection = ({ times, handleBreakTime }) => {
+const TimeSection = ({ times, handleBreakTime, breakTime }) => {
   let totalTime = 0;
   for (const time of times) {
     totalTime += time;
@@ -35,7 +35,7 @@ const TimeSection = ({ times, handleBreakTime }) => {
         Exercise Time <span>{totalTime}</span>
       </div>
       <div className="break-time">
-        Break Time <span></span>
+        Break Time <span>{breakTime}</span>
       </div>
       <button>complete</button>
     </div>

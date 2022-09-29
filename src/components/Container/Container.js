@@ -6,7 +6,7 @@ import Exercises from "../Exercises/Exercises";
 const Container = () => {
   const [exercises, setExercises] = useState([]);
   const [times, setTimes] = useState([]);
-  const [breaktime, setBreakTime] = useState([]);
+  const [breakTime, setBreakTime] = useState([]);
   useEffect(() => {
     fetch("./fakedata.json")
       .then((data) => data.json())
@@ -16,8 +16,10 @@ const Container = () => {
 
   useEffect(() => {
     const exists = localStorage.getItem("break-time");
-    console.log(exists);
-  }, [breaktime]);
+    if (exists) {
+      setBreakTime(exists);
+    }
+  }, [breakTime]);
 
   const handleAddTime = (getTime) => {
     const getTimeInt = parseInt(getTime);
@@ -25,11 +27,11 @@ const Container = () => {
     setTimes(timeArr);
   };
 
-  const handleBreakTime = (time) => {
-    setBreakTime(time);
-    localStorage.setItem("break-time", time);
+  const handleBreakTime = (selectedtime) => {
+    setBreakTime(selectedtime);
+    localStorage.setItem("break-time", selectedtime);
   };
-
+  console.log(breakTime);
   return (
     <div className="container">
       <div className="exercises-container">
@@ -44,6 +46,7 @@ const Container = () => {
       <TimeSection
         times={times}
         handleBreakTime={handleBreakTime}
+        breakTime={breakTime}
       ></TimeSection>
     </div>
   );
