@@ -34,14 +34,24 @@ const Container = () => {
 
   return (
     <div className="container">
-      <div className="exercises-container">
-        {exercises.map((exercise) => (
-          <Exercises
-            exercise={exercise}
-            key={exercise._id}
-            handleAddTime={handleAddTime}
-          ></Exercises>
-        ))}
+      <div>
+        <div className="header">
+          <img
+            className="site-icon"
+            src="https://cdn-icons-png.flaticon.com/512/5051/5051382.png"
+            alt="knee icon"
+          />
+          <h1>Strengthen Your Knee</h1>
+        </div>
+        <div className="exercises-container">
+          {exercises.map((exercise) => (
+            <Exercises
+              exercise={exercise}
+              key={exercise._id}
+              handleAddTime={handleAddTime}
+            ></Exercises>
+          ))}
+        </div>
       </div>
       <TimeSection
         times={times}

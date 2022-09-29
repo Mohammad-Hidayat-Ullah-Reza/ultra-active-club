@@ -2,9 +2,38 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #36404f;
+  margin-top: 20px;
+}
+.header h1 {
+  margin: 0;
+}
+.site-icon {
+  width: 30px;
+  margin-right: 10px;
+}
 .exercises-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 25px;
   padding: 40px;
+}
+
+@media screen and (max-width: 769px) {
+  .exercises-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 577px) {
+  .header {
+    flex-direction: column;
+  }
+  .exercises-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
