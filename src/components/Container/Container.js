@@ -5,17 +5,27 @@ import Exercises from "../Exercises/Exercises";
 
 const Container = () => {
   const [exercises, setExercises] = useState([]);
+  const [times, setTimes] = useState([]);
+  const [breaktimes, setBreakTimes] = useState([]);
   useEffect(() => {
     fetch("./fakedata.json")
       .then((data) => data.json())
       .then((res) => setExercises(res))
       .catch((e) => console.log(e));
   }, []);
+  useEffect(() => {}, []);
 
-  const handleAddTime = (time) => {
-    
-
+  const handleAddTime = (getTime) => {
+    const getTimeInt = parseInt(getTime);
+    const timeArr = [...times, getTimeInt];
+    setTimes(timeArr);
   };
+
+  const handleBreakTime = (breakTime) => {
+    const breakTimeInt = parseInt(breakTime);
+    setBreakTimes(breakTimeInt);
+  };
+  console.log(breaktimes);
   return (
     <div className="container">
       <div className="exercises-container">
@@ -27,7 +37,10 @@ const Container = () => {
           ></Exercises>
         ))}
       </div>
-      <TimeSection></TimeSection>
+      <TimeSection
+        times={times}
+        handleBreakTime={handleBreakTime}
+      ></TimeSection>
     </div>
   );
 };

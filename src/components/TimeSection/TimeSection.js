@@ -1,7 +1,11 @@
 import "./TimeSection.css";
 import React from "react";
 
-const TimeSection = () => {
+const TimeSection = ({ times, handleBreakTime }) => {
+  let totalTime = 0;
+  for (const time of times) {
+    totalTime += time;
+  }
   return (
     <div className="aside-section">
       <div className="profile-container">
@@ -20,15 +24,15 @@ const TimeSection = () => {
       <div>
         <h4 className="select-break-time">Select Break Time</h4>
         <div className="break-time-option-container">
-          <div>05s</div>
-          <div>10s</div>
-          <div>20s</div>
-          <div>40s</div>
-          <div>50s</div>
+          <div onClick={() => handleBreakTime("05")}>05s</div>
+          <div onClick={() => handleBreakTime("10")}>10s</div>
+          <div onClick={() => handleBreakTime("20")}>20s</div>
+          <div onClick={() => handleBreakTime("40")}>40s</div>
+          <div onClick={() => handleBreakTime("50")}>50s</div>
         </div>
       </div>
       <div className="exercise-time">
-        Exercise Time <span></span>
+        Exercise Time <span>{totalTime}</span>
       </div>
       <div className="break-time">
         Break Time <span></span>
