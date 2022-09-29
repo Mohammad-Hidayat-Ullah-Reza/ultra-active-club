@@ -3,10 +3,14 @@ import React from "react";
 
 const TimeSection = () => {
   return (
-    <div>
+    <div className="aside-section">
       <div className="profile-container">
         <div>
-          <img className="profile-pic" src="/logo192.png" alt="" />
+          <img
+            className="profile-pic"
+            src="https://avatars.githubusercontent.com/u/91150098?v=4"
+            alt="profle pic of Mohammad Hidayat"
+          />
         </div>
         <div className="profile-info">
           <h5 className="profile-name">Mohammad Hidayat</h5>

@@ -1,3 +1,38 @@
+.exercise-card {
+  width: 300px;
+  height: 500px;
+  border: 1px solid salmon;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: azure;
+}
+.exercise-card-img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
 .exercise-card-info {
   text-align: left;
+  padding: 10px;
+}
+.exercise-card-info h3 {
+  margin-top: 0;
+}
+.time {
+  font-weight: 700;
+}
+
+.exercise-card-add-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  border: none;
+  background-color: #ffe4c4;
+  font-weight: 600;
+}
+.exercise-card-add-btn:hover {
+  background-color: rgb(252, 202, 140);
+  cursor: pointer;
 }

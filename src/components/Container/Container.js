@@ -11,11 +11,20 @@ const Container = () => {
       .then((res) => setExercises(res))
       .catch((e) => console.log(e));
   }, []);
+
+  const handleAddTime = (time) => {
+    
+
+  };
   return (
     <div className="container">
       <div className="exercises-container">
         {exercises.map((exercise) => (
-          <Exercises exercise={exercise} key={exercise._id}></Exercises>
+          <Exercises
+            exercise={exercise}
+            key={exercise._id}
+            handleAddTime={handleAddTime}
+          ></Exercises>
         ))}
       </div>
       <TimeSection></TimeSection>
