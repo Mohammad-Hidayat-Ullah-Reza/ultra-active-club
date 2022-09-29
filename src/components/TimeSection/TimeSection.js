@@ -1,11 +1,23 @@
 import "./TimeSection.css";
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const TimeSection = ({ times, handleBreakTime, breakTime }) => {
   let totalTime = 0;
   for (const time of times) {
     totalTime += time;
   }
+  const notify = () =>
+    toast(" Wow so easy!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   return (
     <div className="aside-section">
       <div className="profile-container">
@@ -37,7 +49,20 @@ const TimeSection = ({ times, handleBreakTime, breakTime }) => {
       <div className="break-time">
         Break Time <span>{breakTime}</span>
       </div>
-      <button>complete</button>
+      <div>
+        <button onClick={notify}>complete</button>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+      </div>
     </div>
   );
 };
