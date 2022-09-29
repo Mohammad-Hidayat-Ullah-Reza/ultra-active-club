@@ -2,6 +2,10 @@
   background-color: #f0ffff;
   border-left: 1px solid #36404f;
 }
+.aside-section-subcontainer {
+  position: sticky;
+  top: 0;
+}
 .profile-container {
   display: flex;
   align-items: center;
@@ -95,8 +99,13 @@
 }
 
 @media screen and (max-width: 577px) {
+  .aside-section-subcontainer {
+    position: relative;
+  }
+
   .exercise-details {
     text-align: center;
+    margin-top: 0;
   }
   .exercise-time,
   .break-time {
